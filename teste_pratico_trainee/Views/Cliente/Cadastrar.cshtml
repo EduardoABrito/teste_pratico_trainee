@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<div class="container">
+    <h2 class="text-center m-3 fw-bold">Cadastro de Clientes</h2>
+    <hr class="dashed">
+    <form id="cliente_cadastrar">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Dados Do Cliente</h5>
+                <div class="w-75">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control form-control-md form-control-solid" placeholder="Nome" required/>
+                </div>
+                <div class="w-75">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo" class="form-select">
+                        <option value="m">Masculino</option>
+                        <option value="f">Feminino</option>
+                    </select>
+                </div>
+                <div class="w-75">
+                    <label for="dt_nascimento">Data Nascimento</label>
+                    <input type="text" id="dt_nascimento" name="dt_nascimento" class="form-control form-control-md form-control-solid datePicker" placeholder="Data Nascimento" required/>
+                </div>
+                <div class="w-75">
+                    <label for="estado_civil">Estado Civil</label>
+                    <select name="estado_civil" id="estado_civil" class="form-select">
+                        <option value="S">Solteiro</option>
+                        <option value="C">Casado</option>
+                        <option value="V">Viuvo</option>
+                    </select>
+                </div>
+                <div class="w-75">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control form-control-md form-control-solid cpf" placeholder="CPF" required/>
+                </div>
+                <div class="w-75">
+                    <label for="rg">RG</label>
+                    <input type="text" id="rg" name="rg" class="form-control form-control-md form-control-solid rg" placeholder="Rg" required/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h5>Endereço Do Cliente</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" class="form-control form-control-md form-control-solid cep" placeholder="CEP" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="tipo_id">Tipo</label>
+                            <select name="tipo_id" id="tipo_id" class="form-select" Required>
+                                <option value="1">Residencial</option>
+                                <option value="2">Comercial</option>
+                                <option value="3">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div>
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" id="logradouro" name="logradouro" class="form-control form-control-md form-control-solid" placeholder="Logradouro" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <label for="numero">Número</label>
+                            <input type="number" id="numero" name="numero" class="form-control form-control-md form-control-solid" placeholder="Número" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" class="form-control form-control-md form-control-solid" placeholder="Bairro" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" class="form-control form-control-md form-control-solid" placeholder="Cidade" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <label for="uf">UF</label>
+                            <input type="text" id="uf" name="uf" class="form-control form-control-md form-control-solid" placeholder="UF" maxlength="2" Required />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" class="form-control form-control-md form-control-solid" placeholder="Casa Apto etc" Required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center p-3">
+            <button type="submit" class="btn btn-success m-1">Cadastrar</button>
+            <button type="reset" class="btn btn-danger m-1">Resetar</button>
+        </div>
+    </form>
+</div>
+<script src="~/Content/Cliente/Scripts/Cadastrar.js" defer></script>
+

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Teste Trainee</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Plugins/Css")
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Teste Pratico Trainee</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cliente
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="@Url.Action("Cadastrar", "Cliente")">Cadastrar Cliente</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Index", "Home")">Listar Cliente</a></li>                         
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    @RenderBody()
+
+
+
+
+    @Scripts.Render("~/bundles/Scripts/bootstrap")
+    @Scripts.Render("~/Content/Scripts/Marcaras")
+    @Scripts.Render("~/Content/Plugins/Scripts")
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
