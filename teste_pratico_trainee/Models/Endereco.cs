@@ -27,7 +27,7 @@ namespace teste_pratico_trainee.Models
 
             try
             {
-                using (MySqlCommand sql = new MySqlCommand("prc_endereco_listar_id", conexao))
+                using (MySqlCommand sql = new MySqlCommand("prc_endereco_lista_id", conexao))
                 {
                     sql.CommandType = System.Data.CommandType.StoredProcedure;
                     sql.Parameters.AddWithValue("$id", id);
